@@ -54,19 +54,23 @@ Tell the user: "Saved to `~/htmlify/[topic-slug].html` and opened in browser. Ru
 
 ## Action: publish
 
-When the user runs `/htmlify publish`:
+When the user runs `/htmlify publish` or `/htmlify publish [path/to/file]`:
 
-### Step 1: Find the last generated file
+### Step 1: Find the file to publish
+
+If a file path was provided as an argument, use that file.
+
+Otherwise, find the last generated file:
 
 ```bash
 ls -t ~/htmlify/*.html | head -1
 ```
 
-Read that file's content using the Read tool.
+Read that file's content using the Read tool. Supports `.html` and `.md` files — the app handles conversion automatically.
 
 ### Step 2: Extract title
 
-Use the `<title>` tag content from the HTML as the title. If none, use the filename (without extension).
+For HTML: use the `<title>` tag content. For Markdown: use the first `# Heading`. If neither, use the filename (without extension).
 
 ### Step 3: POST to the API
 
