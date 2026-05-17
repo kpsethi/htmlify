@@ -41,4 +41,4 @@ Restart Claude Code. The `/htmlify` skill is now available.
 
 ## Web app
 
-The publish action posts to [github.com/kpsethi/htmlify](https://github.com/kpsethi/htmlify) — a minimal Next.js app that hosts the HTML. Self-host it if you want your own URL.
+The publish action posts to [github.com/kpsethi/htmlify-app](https://github.com/kpsethi/htmlify-app) — a minimal Next.js app that hosts the HTML. Self-host it if you want your own URL.
